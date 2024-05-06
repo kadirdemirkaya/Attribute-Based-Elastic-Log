@@ -72,6 +72,7 @@ namespace Es_Log.Api.Controllers
         [HttpPut]
         [SpecifyRequestLog(ActionType = ActionType.Relation, Controller = Constant.Controller.Auth)]
         [TypeFilter(typeof(SetLogFilter))]
+        [SetLog(Controller = "Auth")]
         [Route("user-assign-role")]
         public async Task<IActionResult> UserAssignRole([FromBody] RoleAddToUserViewModel roleAddToUserViewModel)
         {
